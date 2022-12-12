@@ -2,6 +2,8 @@
     //add dynamic title
     function followNabil_theme_support(){
         add_theme_support('title-tag');
+        add_theme_support('custom-logo');
+        add_theme_support('post-thumbnails');
     }
     add_action('after_setup_theme', 'followNabil_theme_support');
 
@@ -13,6 +15,7 @@
         );
         register_nav_menus($locations);
     }
+    add_action('init', 'followAndrew_menus');
     function follownabil_register_styles(){
 
         $version = wp_get_theme()->get('version');
